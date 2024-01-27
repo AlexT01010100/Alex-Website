@@ -111,10 +111,10 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     xhr.onload = function() {
         if (xhr.status === 200) {
             // Email sent successfully, handle success
-            window.location.href = "personal_website.html?email_sent_successfully";
+            window.location.href = "index.html?email_sent_successfully";
         } else {
             // Error sending email, handle error
-            window.location.href = "personal_website.html?error_sending_email";
+            window.location.href = "index.html?error_sending_email";
         }
     };
 });
