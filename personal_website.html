@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<!-- set up and imports-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex's Website</title>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+w
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- nav bar -->
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">Alex's Portfolio</a>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#my-story">About Me</a>
+            <a href="#education">Education</a>
+            <a href="#portfolio">Projects</a>
+            <a href="#contact">Contact</a>
+
+        </nav>
+    </header>
+
+    <!-- home page -->
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hi there!</h3>
+            <h1>My name is Alexander Terry</h1>
+            <h3>And I'm an <span>Aspiring Software Engineer</span></h3>
+            <div class="social-media">
+                <a href="https://github.com/AlexT01010100"><i class='bx bxl-github' ></i></a>
+                <a href="https://www.linkedin.com/in/alexander-terry-computer-science/"><i class='bx bxl-linkedin-square' ></i></a>
+            </div>
+            <a href="https://drive.google.com/file/d/1IOQOxYJz5ahV8pOWiMjZoABsdsQdxIz0/view?usp=drive_link" class="btn">Preview Resume</a>
+        </div>
+        <div class="home-img">
+            <img src="cover-img.jpg" alt="" height="100%" width="100%">
+        </div>
+    </section>
+
+
+    <!-- my story -->
+
+    <section class="my-story" id="my-story">
+        <div class="my-story-img">
+            <img src="website-img.jpg" alt="">
+        </div>
+
+        <div class="my-story-content">
+            <h2 class="heading">About <span class="my-story-span">Me</span></h2>
+            <p>
+                I'm currently an honors student at the University at Buffalo, studying Computer Science and Mathematics in my junior year.
+                Originally from Canada, I crossed the border in pursuit of top-notch education. With a strong academic foundation and a
+                passion for problem-solving, I am poised to make a significant contribution in the field of technology.
+            </p>
+<!--            <a href="#" class="btn-my-story">Read More</a>-->
+        </div>
+    </section>
+
+    <!-- education -->
+
+    <section class="education" id="education">
+        <div class="my-education-img">
+            <img src="education.png" alt="">
+        </div>
+        <div class="education-content">
+            <h1 class="heading">My <span class="education-span">Education</span></h1>
+            <h6> B.S./B.A. Computer Science, Mathematics</h6>
+            <p> <span>Expected Graduation Date:</span> May 2025 <br><br>
+                <span>GPA:</span> 3.88/4.00 (Cumulative) <br><br>
+                <span>Awards:</span> Dean's List x5, Grace W. Capen Award, and SEAS Scholarship Endowment <br><br>
+                <span>Current Courses:</span> CSE312 (Web Applications), CSE442 (Software Engineering), CSE379 (Intro to Microprocessors), CSE306 (Software Quality in Practice), CSE495 (Undergraduate Teaching Assistant), NEU498 (Neuroscience Independent Research), GEO334 (International Business Cultures) <br><br>
+                <span>Extracurricular Activities:</span> Theta Tau, Engineering Intramurals, Math club, and Improv Club.</p>
+        </div>
+    </section>
+
+    <!--portfolio -->
+
+    <!--layout of project section-->
+
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Projects</span></h2>
+        <div class="portfolio-wrap">
+        <a href="#" class="scroll-arrows">
+            <i class='bx bxs-chevron-left' id="back_button"></i>
+            <i class='bx bxs-chevron-right' id="forward_button"></i>
+        </a>
+
+            <!--dynamic memory allocator project-->
+
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <span><img src="dynamic-memory-allocator-img.png" alt="" height="470" width="100%"></span>
+                <div class="portfolio-layer">
+                    <h4>Dynamic Memory Allocator</h4>
+                    <p>Languages: C/C++</p>
+                    <a href="https://github.com/AlexT01010100/Dynamic-Memory-Allocator"><i class='bx bx-link-external' ></i></a>
+                </div>
+            </div>
+
+            <!--self checkout system project-->
+
+            <div class="portfolio-box">
+                <span><img src="website-img-selfcheckout-img.png" alt="" height="470" width="100%"></span>
+                <div class="portfolio-layer">
+                    <h4>Self Checkout System</h4>
+                    <p>Languages: Java/Scala</p>
+                    <a href="https://github.com/AlexT01010100/Self-Checkout-System"><i class='bx bx-link-external' ></i></a>
+                </div>
+            </div>
+
+            <!--university interactive map project-->
+
+            <div class="portfolio-box">
+                <span><img src="engagement-map-img.png" alt="" height="470" width="100%"></span>
+                <div class="portfolio-layer">
+                    <h4>University Interactive Map</h4>
+                    <p>Languages: JS, HTML5, CSS, Photoshop</p>
+                    <a href="https://github.com/skxvtchy/Interactive_Map"><i class='bx bx-link-external' ></i></a>
+                </div>
+            </div>
+
+            <!--jaclyn's threading project-->
+
+            <div class="portfolio-box">
+                <span><img src="microblading-img.png" alt="" height="470" width="100%"></span>
+                <div class="portfolio-layer">
+                    <h4>Jaclyns Threading Website</h4>
+                    <p>Languages: JS, HTML5, CSS</p>
+                    <a href="https://github.com/AlexT01010100/Jaclyns-Threading-Website"><i class='bx bx-link-external' ></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- contact section-->
+
+    <section class="contact" id="contact">
+        <h2 class="heading"><span>Contact </span>Me</h2>
+
+        <form action="server.php" method="post">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name" name="fullName">
+                <input type="text" placeholder="Email" name="email">
+            </div>
+            <textarea name="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+
+     <script src="script.js"></script>
+</body>
+
+</html>
