@@ -103,7 +103,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
 
     // Send form data using AJAX
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://formspree.io/alexwebsite17@gmail.com", true);
+    xhr.open("POST", "https://formspree.io/f/xayrqlen", true);
     xhr.setRequestHeader("Accept", "application/json");
     xhr.send(formData);
 
