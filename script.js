@@ -111,10 +111,10 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     xhr.onload = function() {
         if (xhr.status === 200) {
             // Email sent successfully, handle success
-            window.location.href = "https://alexanderterry.me/";
+            window.location.href = "index.html";
         } else {
             // Error sending email, handle error
-            window.location.href = "https://alexanderterry.me/";
+            window.location.href = "index.html";
         }
     };
 });
