@@ -1,1 +1,1 @@
-Feel free to check out my personal webstie at "www.alexanderterry.me"!
+Feel free to check out my personal website at www.alexanderterry.me!
