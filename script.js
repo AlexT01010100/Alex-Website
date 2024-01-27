@@ -94,3 +94,28 @@ back_button.addEventListener("click", () => {
     scrollContainer.scrollLeft -= 900;
 });
 
+//email form submission handler
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Get form data
+    var formData = new FormData(this);
+
+    // Send form data using AJAX
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://formspree.io/alexwebsite17@gmail.com", true);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.send(formData);
+
+    // Handle the AJAX response
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            // Email sent successfully, handle success
+            window.location.href = "personal_website.html?email_sent_successfully";
+        } else {
+            // Error sending email, handle error
+            window.location.href = "personal_website.html?error_sending_email";
+        }
+    };
+});
+
