@@ -199,48 +199,144 @@ span {
 
 .education {
     display: flex;
-    position: relative;
-    right: 14rem;
     justify-content: center;
+    align-items: center;
     background: var(--bg-color);
     font-size: 3.9rem;
+    text-align: center;
+    padding: 4rem 0; /* Add padding as needed */
+}
+
+.education-content {
+    text-align: center;
+    max-width: 500px;
+}
+
+.education-content h1 {
+    margin: 0;
     text-align: center;
 }
 
 .education-content h6 {
-    position: relative;
-    left: 14rem;
+    margin: 0;
     color: darkblue;
-}
-
-.education-content h1 {
-    position: relative;
-    left: 13rem;
-}
-
-.education-content p {
-    position: relative;
-    text-align: left; /* Align the text to the right */
-    margin: 2rem auto; /* Center the paragraph horizontally */
-    max-width: 60%; /* Set a maximum width to control the width of the paragraph */
-    font-size: 2rem;
-    display: block; /* Ensure the paragraph is displayed as a block element */
-    left: -22rem;
-    top: 5rem;
-
-}
-.my-education-img img {
-    width: 500%;
-    height: auto;
-    position: relative;
-    top: 220px;
-    left: 84rem;
+    text-align: center;
 }
 
 .education-content p span {
-    font-weight: bold;
+    margin: 0;
     color: black;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: left;
+
 }
+
+.education-content p  {
+    margin: 0;
+    color: black;
+    max-width: 800rem;
+    font-size: 2.5rem;
+    text-align: left;
+    display: block; /* Ensure the paragraph is displayed as a block element */
+}
+
+
+
+/* Media Query for Fullscreen Sizes */
+@media (min-width: 1200px) {
+    .education-content {
+        max-width: none; /* Reset max-width for larger screens */
+        text-align: center; /* Center the text horizontally */
+    }
+
+    .education-content h1,
+    .education-content h6 {
+        text-align: center; /* Center the title horizontally */
+        position: relative;
+        left: -10rem;
+    }
+
+
+    .education-content p {
+        position: relative;
+        left: -45rem;
+        max-width: 800px;
+        top: 5rem;
+    }
+
+    .my-education-img {
+        position: relative; /* Set position to relative */
+        left: 50rem;
+        top: 12rem;
+    }
+
+    .my-education-img img {
+        width: 200%; /* Allow image to take full width */
+        height: 100%;
+    }
+
+}
+
+/* Media Query for Fullscreen Sizes */
+@media (min-width: 1200px) {
+    .education-content {
+        max-width: 800px; /* Adjust max-width for larger screens */
+        margin: 0 auto; /* Center the content horizontally */
+        text-align: center; /* Center the text horizontally */
+    }
+
+    .education-content h1,
+    .education-content h6 {
+        text-align: center; /* Center the title horizontally */
+        position: static; /* Remove relative positioning */
+        margin-left: -20rem; /* Remove the left offset */
+    }
+
+    .education-content p {
+        max-width: 800px;
+        margin: 5rem auto 0; /* Adjust top margin and center horizontally */
+        text-align: left; /* Align the text to the left */
+    }
+
+    .my-education-img {
+        text-align: center; /* Center the image horizontally */
+        position: relative;
+        left: 93rem;
+        margin-top: 2rem; /* Add some top margin to separate from the text */
+    }
+
+    .my-education-img img {
+        width: 180%; /* Allow the image to take full width */
+        height: auto; /* Maintain the aspect ratio */
+        max-width: 10000000px; /* Set a maximum width for larger screens */
+
+    }
+}
+
+
+/* Media Query for Small-sized Screens */
+@media (max-width: 768px) {
+    .education {
+        padding: 2rem 0; /* Adjust padding for smaller screens */
+    }
+
+    .education-content {
+        left: 0; /* Reset left position */
+        max-width: 100%; /* Allow content to take full width */
+        margin-top: 2rem; /* Add margin as needed */
+    }
+
+    .my-education-img {
+        left: 0; /* Reset left position */
+        width: 100%; /* Allow image to take full width */
+    }
+
+    .my-education-img img {
+        width: 100%; /* Allow image to take full width */
+    }
+}
+
 
 .my-story-span {
     color: var(--bg-color);
