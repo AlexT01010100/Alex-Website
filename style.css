@@ -224,9 +224,9 @@ span {
     .my-story-img img {
         width: 100%;
         position: relative;
-        left: 52%;
+        left: 28%;
         height: auto;
-        max-width: 45vw;
+        max-width: 60vw;
         margin: 0 auto; /* Center the image horizontally */
         display: block; /* Ensure proper block-level rendering */
     }
