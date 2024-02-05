@@ -336,6 +336,7 @@ span {
 
     .education-content p {
         max-width: 800px;
+        width: 100%;
         margin: 5rem auto 0; /* Adjust top margin and center horizontally */
         text-align: left; /* Align the text to the left */
     }
@@ -382,11 +383,13 @@ span {
         margin-top: 22rem;
         margin-bottom: -2rem;
         max-width: 100%;
+        font-size: 2.1rem;
         position: relative; /* Set position to relative for absolute positioning of the span */
         z-index: 1; /* Set a lower z-index to allow the span to be on top */
     }
 
     .education-content p span {
+        font-size: 2.3rem;
         display: block;
         text-align: center;
         margin: 1rem auto;
