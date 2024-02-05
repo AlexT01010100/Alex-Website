@@ -679,7 +679,7 @@ span {
 
 .scroll-arrows .bx.bxs-chevron-left{
     position: relative;
-    top: 370px;
+    top: 260px;
     transform: translateY(-50%);
     left: -130px; /* Adjust the left position as needed */
 }
@@ -688,7 +688,7 @@ span {
     position: relative;
     transform: translateY(-50%);
     left: 93%; /* Adjust the left position as needed */
-    top: 370px;
+    top: 260px;
 }
 
 .scroll-arrows i {
