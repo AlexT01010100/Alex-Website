@@ -318,6 +318,7 @@ span {
 /* Media Query for Small-sized Screens */
 @media (max-width: 768px) {
     .education {
+        position: relative; /* Set position to relative for containing the absolute-positioned image */
         padding: 2rem 0; /* Adjust padding for smaller screens */
     }
 
@@ -325,40 +326,40 @@ span {
         max-width: 100%; /* Allow content to take full width */
         text-align: center; /* Center the text */
         margin-top: 2rem; /* Add margin as needed */
+        position: relative; /* Set position to relative for z-index to work */
+        z-index: 2; /* Set a higher z-index to bring the text forward */
     }
 
     .education-content h1,
-    .education-content h6 {
-        text-align: center; /* Center the title and subtitle */
-        margin-left: -5rem; /* Add margin as needed */
+    .education-content h6,
+    .education-content p {
+        text-align: center; /* Center the title, subtitle, and paragraph */
+        margin: 0; /* Remove any default margins */
+        z-index: 2; /* Set a higher z-index to bring the text forward */
+
     }
 
     .education-content p {
-        position: static; /* Remove relative positioning */
-        max-width: 90%; /* Allow paragraph to take full width */
-        text-align: center; /* Align the text to the left */
-        margin-top: 25rem;
+        margin-top: 23rem;
         margin-bottom: -2rem;
+        max-width: 100%;
     }
 
     .education-content p span {
-        display: block; /* Ensure proper block-level rendering */
-        text-align: center; /* Center the span */
-        margin: 1rem auto; /* Center the span horizontally with some vertical margin */
+        display: block;
+        text-align: center;
+        margin: 1rem auto;
     }
 
     .my-education-img {
-        max-width: 100%; /* Allow container to take full width */
-        text-align: center; /* Center the image horizontally */
+        position: absolute; /* Set position to absolute for layering behind the content */
+        top: 17rem;
+        left: 0;
+        width: 100vw; /* Use viewport width units */
+        height: auto;
+        z-index: 1; /* Set a lower z-index to place it behind the content */
     }
 
-    .my-education-img img {
-        position: relative;
-        top: -40rem;
-        left: 18rem;
-        width: 500%; /* Allow image to take full width */
-        height: auto; /* Maintain aspect ratio */
-    }
 }
 
 
