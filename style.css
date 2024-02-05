@@ -797,8 +797,8 @@ span {
     .navbar {
         position: absolute;
         top: 100%;
-        left: 73%;
-        width: 27%;
+        left: 69%;
+        width: 32%;
         padding: 1rem 3%;
         background: var(--text-color);
         border-top: .1rem solid rgba(0, 0, 0, .2);
