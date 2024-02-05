@@ -669,6 +669,55 @@ span {
     font-size: 100px; /* Adjust the font size as needed */
 }
 
+/* Media Query for Small-sized Screens */
+/* Media Query for Small-sized Screens */
+@media (max-width: 768px) {
+    .portfolio-container div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .portfolio-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio h2 {
+        margin-bottom: 2rem;
+    }
+
+    .portfolio-box {
+        text-align: center;
+        overflow: hidden; /* Ensure the overflow is hidden to prevent content from extending beyond the box */
+        position: relative; /* Add relative positioning for absolute layers */
+        transition: transform 0.5s ease;
+    }
+
+    .portfolio-box img {
+        width: 80%;
+        max-width: 150vw;
+        height: auto;
+    }
+
+    .portfolio-box:hover {
+        width: 100%; /* Adjust the width on hover to reduce the transition box width */
+    }
+
+    .portfolio-box .portfolio-layer,
+    .portfolio-box .portfolio-layer-1,
+    .portfolio-box .portfolio-layer-2,
+    .portfolio-box .portfolio-layer-3 {
+        position: absolute;
+        top: 0;
+        left: 7.5%;
+        width: 84.7%; /* Set layers to cover the entire box */
+        padding: 0 1rem; /* Adjust padding to reduce the width of the transition box */
+        box-sizing: border-box; /* Include padding in the width calculation */
+    }
+}
+
+
 .contact h2 {
     margin-bottom: 3rem;
 }
