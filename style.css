@@ -337,7 +337,7 @@ span {
         position: static; /* Remove relative positioning */
         max-width: 90%; /* Allow paragraph to take full width */
         text-align: center; /* Align the text to the left */
-        margin-top: 5rem;
+        margin-top: 25rem;
         margin-bottom: -2rem;
     }
 
@@ -353,7 +353,10 @@ span {
     }
 
     .my-education-img img {
-        width: 100%; /* Allow image to take full width */
+        position: relative;
+        top: -40rem;
+        left: 18rem;
+        width: 500%; /* Allow image to take full width */
         height: auto; /* Maintain aspect ratio */
     }
 }
