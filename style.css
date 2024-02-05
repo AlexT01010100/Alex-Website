@@ -142,6 +142,11 @@ span {
     box-shadow: none;
 }
 
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+}
+
 .my-story {
     display: flex;
     justify-content: center;
@@ -155,11 +160,6 @@ span {
     position: relative;
     top: -40px;
     right: 35px;
-}
-
-.heading {
-    text-align: center;
-    font-size: 4.5rem;
 }
 
 .my-story-content h2 {
@@ -195,6 +195,29 @@ span {
 
 .my-story-span {
     color: var(--bg-color);
+}
+
+/* Media Query for Small-sized Screens */
+@media (max-width: 768px) {
+    .my-story {
+        align-items: flex-start; /* Reset alignment for larger screens */
+    }
+
+    .my-story-img img {
+        width: 100%;
+        position: relative;
+        left: 52%;
+        height: auto;
+        max-width: 45vw;
+        margin: 0 auto; /* Center the image horizontally */
+        display: block; /* Ensure proper block-level rendering */
+    }
+
+    .my-story-content h2,
+    .my-story-content h3,
+    .my-story-content p {
+        text-align: center; /* Reset text alignment for larger screens */
+    }
 }
 
 .education {
