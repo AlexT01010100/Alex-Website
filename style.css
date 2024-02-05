@@ -335,18 +335,15 @@ span {
     }
 
     .education-content p {
-        max-width: 600px; /* Set a maximum width for the paragraph */
-        width: 70%; /* Adjust the width as needed or use 'auto' */
-        margin: 2rem auto 0; /* Adjust top margin */
-        text-align: left;
-        font-size: 1.6rem; /* Adjust the font size */
-        line-height: 1.5; /* Adjust the line height for readability */
+        max-width: 800px;
+        margin: 5rem auto 0; /* Adjust top margin and center horizontally */
+        text-align: left; /* Align the text to the left */
     }
 
     .my-education-img {
         text-align: center; /* Center the image horizontally */
         position: relative;
-        left: 20%;
+        left: 60%;
         margin-top: 2rem; /* Add some top margin to separate from the text */
     }
 
@@ -682,7 +679,7 @@ span {
 
 .scroll-arrows .bx.bxs-chevron-left{
     position: relative;
-    top: 340px;
+    top: 370px;
     transform: translateY(-50%);
     left: -130px; /* Adjust the left position as needed */
 }
