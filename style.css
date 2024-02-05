@@ -320,7 +320,7 @@ span {
 }
 
 /* Media Query for Fullscreen Sizes */
-@media (min-width: 1200px) {
+@media (min-width: 769px) {
     .education-content {
         max-width: 800px; /* Adjust max-width for larger screens */
         margin: 0 auto; /* Center the content horizontally */
@@ -335,15 +335,18 @@ span {
     }
 
     .education-content p {
-        max-width: 800px;
-        margin: 5rem auto 0; /* Adjust top margin and center horizontally */
-        text-align: left; /* Align the text to the left */
+        max-width: 600px; /* Set a maximum width for the paragraph */
+        width: 70%; /* Adjust the width as needed or use 'auto' */
+        margin: 2rem auto 0; /* Adjust top margin */
+        text-align: left;
+        font-size: 1.6rem; /* Adjust the font size */
+        line-height: 1.5; /* Adjust the line height for readability */
     }
 
     .my-education-img {
         text-align: center; /* Center the image horizontally */
         position: relative;
-        left: 93rem;
+        left: 20%;
         margin-top: 2rem; /* Add some top margin to separate from the text */
     }
 
@@ -679,7 +682,7 @@ span {
 
 .scroll-arrows .bx.bxs-chevron-left{
     position: relative;
-    top: 370px;
+    top: 340px;
     transform: translateY(-50%);
     left: -130px; /* Adjust the left position as needed */
 }
