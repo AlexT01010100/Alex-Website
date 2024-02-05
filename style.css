@@ -200,7 +200,7 @@ span {
 .education {
     display: flex;
     position: relative;
-    right: 140px;
+    right: 14rem;
     justify-content: center;
     background: var(--bg-color);
     font-size: 3.9rem;
@@ -209,13 +209,13 @@ span {
 
 .education-content h6 {
     position: relative;
-    left: 135px;
+    left: 14rem;
     color: darkblue;
 }
 
 .education-content h1 {
     position: relative;
-    left: 130px;
+    left: 13rem;
 }
 
 .education-content p {
@@ -223,10 +223,10 @@ span {
     text-align: left; /* Align the text to the right */
     margin: 2rem auto; /* Center the paragraph horizontally */
     max-width: 60%; /* Set a maximum width to control the width of the paragraph */
-    font-size: 20px;
+    font-size: 2rem;
     display: block; /* Ensure the paragraph is displayed as a block element */
-    left: -200px;
-    top: 40px;
+    left: -22rem;
+    top: 5rem;
 
 }
 .my-education-img img {
@@ -234,7 +234,7 @@ span {
     height: auto;
     position: relative;
     top: 220px;
-    left: 870px;
+    left: 84rem;
 }
 
 .education-content p span {
