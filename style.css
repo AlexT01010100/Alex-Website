@@ -142,6 +142,19 @@ span {
     box-shadow: none;
 }
 
+/* Media Query for Small-sized Screens */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column; /* Stack items vertically for small screens */
+        align-items: center; /* Center items vertically for small screens */
+        text-align: center; /* Center text horizontally for small screens */
+    }
+
+    .social-media a {
+        margin: 1rem 0.5rem; /* Adjust margin for small screens */
+    }
+}
+
 .heading {
     text-align: center;
     font-size: 4.5rem;
