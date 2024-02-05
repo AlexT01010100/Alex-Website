@@ -335,14 +335,14 @@ span {
     .education-content p {
         text-align: center; /* Center the title, subtitle, and paragraph */
         margin: 0; /* Remove any default margins */
-        z-index: 2; /* Set a higher z-index to bring the text forward */
-
     }
 
     .education-content p {
-        margin-top: 23rem;
+        margin-top: 22rem;
         margin-bottom: -2rem;
         max-width: 100%;
+        position: relative; /* Set position to relative for absolute positioning of the span */
+        z-index: 1; /* Set a lower z-index to allow the span to be on top */
     }
 
     .education-content p span {
@@ -353,11 +353,13 @@ span {
 
     .my-education-img {
         position: absolute; /* Set position to absolute for layering behind the content */
-        top: 17rem;
-        left: 0;
+        margin-top: 1rem;
+        top: 20%; /* Adjust based on your preference and viewport height */
+        left: 50%;
+        transform: translate(-50%, -50%); /* Center the image horizontally and vertically */
         width: 100vw; /* Use viewport width units */
         height: auto;
-        z-index: 1; /* Set a lower z-index to place it behind the content */
+        z-index: 0; /* Set a lower z-index to place it behind the content */
     }
 
 }
