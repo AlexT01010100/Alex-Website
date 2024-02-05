@@ -122,10 +122,20 @@ document.getElementById("contactForm").addEventListener("submit", function(event
 document.addEventListener('DOMContentLoaded', function () {
     const menuIcon = document.getElementById('menu-icon');
     const navbar = document.querySelector('.navbar');
+    const navLinks = document.querySelectorAll('.navbar a');
 
     menuIcon.addEventListener('click', function () {
         navbar.classList.toggle('active');
     });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            navbar.classList.remove('active');
+        });
+    });
 });
+
+
+
 
 
