@@ -245,7 +245,7 @@ span {
     background: var(--bg-color);
     font-size: 3.9rem;
     text-align: center;
-    padding: 4rem 0; /* Add padding as needed */
+    padding: 15rem 0; /* Add padding as needed */
 }
 
 .education-content {
@@ -303,13 +303,13 @@ span {
         position: relative;
         left: -45rem;
         max-width: 800px;
-        top: 5rem;
+        top: 1rem;
     }
 
     .my-education-img {
         position: relative; /* Set position to relative */
         left: 50rem;
-        top: 12rem;
+        top: 7rem;
     }
 
     .my-education-img img {
@@ -360,7 +360,7 @@ span {
 @media (max-width: 768px) {
     .education {
         position: relative; /* Set position to relative for containing the absolute-positioned image */
-        padding: 2rem 0; /* Adjust padding for smaller screens */
+        padding: 7rem 0; /* Adjust padding for smaller screens */
     }
 
     .education-content {
@@ -411,11 +411,15 @@ span {
 }
 
 .portfolio {
-    background: var(--bg-color);
+    background: red;
+}
+
+.portfolio h2 span {
+    color: white;
 }
 
 .portfolio h2 {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 
 .portfolio h4 {
@@ -427,6 +431,7 @@ span {
     height: 50%;
     overflow-x:scroll;
     display: flex;
+    margin-top: -10rem; /* Adjust the value as needed */
 }
 
 .portfolio-container div {
@@ -435,7 +440,7 @@ span {
     align-items: center;
     gap: 2.5rem;
     grid-gap: 20px;
-    padding: 10px;
+    padding: 20px;
     flex: none;
 }
 
@@ -450,21 +455,38 @@ span {
 .portfolio-container .portfolio-box {
     position: relative;
     border-radius: 2rem;
-    box-shadow: 0 0 1rem var(--bg-color);
+    box-shadow: 0 0 1rem red;
     overflow: hidden;
     display: flex;
 
 }
 
+
+.portfolio-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem red; /* Set initial box-shadow color to your background color */
+    overflow: hidden;
+    display: flex;
+    transition: box-shadow 0.5s ease; /* Add a transition for smooth effect */
+}
+
+.portfolio-box:hover {
+    box-shadow: 0 0 1rem var(--main-color); /* Change the box-shadow color on hover */
+}
+
 .portfolio-box img {
     width: 100%;
-    transition: .5s ease;
-
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Add box-shadow transition */
+    box-shadow: 0 0 1rem red; /* Set initial box-shadow color to your background color */
 }
 
 .portfolio-box:hover img {
-    transform: scale(1.1);
+    transform: scale(1.3);
+    box-shadow: 0 0 1rem white; /* Change the box-shadow color on hover */
 }
+
+
 
 .portfolio-box .portfolio-layer-3 {
     position: absolute;
@@ -506,7 +528,7 @@ span {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+    background: linear-gradient(rgba(0, 0, 0, .1), darkcyan);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -674,6 +696,7 @@ span {
     font-size: 100px; /* Adjust the font size as needed */
 }
 
+
 /* Media Query for Small-sized Screens */
 @media (max-width: 768px) {
     .portfolio-container div {
@@ -695,16 +718,18 @@ span {
         text-align: center;
         overflow: hidden;
         position: relative;
-        transition: transform 0.5s ease;
+        height: auto; /* Set the desired fixed height for the portfolio box */
+        transition: height 0.5s ease;
     }
 
     .portfolio-box img {
-        width: 80%;
+        width: 71%;
         max-width: 150vw;
         height: auto;
     }
 
     .portfolio-box:hover {
+        height: 100%;
         width: 100%;
     }
 
@@ -720,13 +745,13 @@ span {
         box-sizing: border-box;
     }
 
-    /* Add this class to exclude top layer from top positioning */
+    /* Add this class to exclude the top layer from top positioning */
     .portfolio-box .portfolio-layer-top {
         top: auto;
         bottom: 0; /* Position at the bottom instead of the top */
     }
-
 }
+
 
 
 .contact h2 {
