@@ -398,7 +398,7 @@ span {
     .my-education-img {
         position: absolute; /* Set position to absolute for layering behind the content */
         margin-top: 1rem;
-        top: 20%; /* Adjust based on your preference and viewport height */
+        top: 24%; /* Adjust based on your preference and viewport height */
         left: 50%;
         transform: translate(-50%, -50%); /* Center the image horizontally and vertically */
         width: 100vw; /* Use viewport width units */
