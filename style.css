@@ -27,6 +27,11 @@ body{
     color: var(--text-color);
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 .header{
     position: fixed;
     top: 0;
@@ -689,8 +694,8 @@ span {
 
     .portfolio-box {
         text-align: center;
-        overflow: hidden; /* Ensure the overflow is hidden to prevent content from extending beyond the box */
-        position: relative; /* Add relative positioning for absolute layers */
+        overflow: hidden;
+        position: relative;
         transition: transform 0.5s ease;
     }
 
@@ -701,7 +706,7 @@ span {
     }
 
     .portfolio-box:hover {
-        width: 100%; /* Adjust the width on hover to reduce the transition box width */
+        width: 100%;
     }
 
     .portfolio-box .portfolio-layer,
@@ -711,10 +716,15 @@ span {
         position: absolute;
         top: 0;
         left: 7.5%;
-        width: 84.7%; /* Set layers to cover the entire box */
-        padding: 0 1rem; /* Adjust padding to reduce the width of the transition box */
-        box-sizing: border-box; /* Include padding in the width calculation */
+        width: 84.7%;
+        padding: 0 1rem;
+        box-sizing: border-box;
     }
+
+    .portfolio-box .portfolio-layer-3 {
+        margin-top: -10rem;
+    }
+
 }
 
 
