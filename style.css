@@ -39,6 +39,7 @@ html, body {
     width: 100%;
     padding: 2rem 9%;
     background: #404040;
+    color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -258,6 +259,10 @@ span {
 .education-content h1 {
     margin: 0;
     text-align: center;
+}
+
+.education-content h1 {
+    color: black;
 }
 
 .education-content h6 {
