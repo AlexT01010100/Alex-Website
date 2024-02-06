@@ -506,7 +506,7 @@ span {
 }
 
 .portfolio-box:hover .portfolio-layer{
-    box-shadow: 0 0 1rem green; /* Change the box-shadow color on hover */
+    box-shadow: 0 0 1rem #9896f1; /* Change the box-shadow color on hover */
 }
 
 .portfolio-box .portfolio-layer-2 {
