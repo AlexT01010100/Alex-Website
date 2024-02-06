@@ -262,7 +262,7 @@ span {
 
 .education-content h6 {
     margin: 0;
-    color: #393e46;
+    color: black;
     text-align: center;
 }
 
@@ -768,8 +768,8 @@ span {
     margin: 1rem auto 3rem;
 }
 
-#contactForm input,
-#contactForm textarea {
+.contactForm input,
+.contactForm textarea {
     color: var(--bg-color);; /* You can replace #333 with your desired color code or color name */
 }
 
