@@ -13,8 +13,8 @@
 
 :root {
     --bg-color:white;
-    --text-color: #323946;
-    --main-color: red;
+    --text-color: #404040;
+    --main-color: #2772db;
 }
 
 html{
@@ -46,7 +46,7 @@ html, body {
 }
 
 .header.sticky {
-    border-bottom: 1rem solid rgb(123, 123, 123, 1);;
+    border-bottom: 1rem solid rgb(123, 123, 123, 1);
 }
 
 .logo{
@@ -170,7 +170,7 @@ span {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    background: red;
+    background: #404040;
 }
 
 .my-story-img img {
@@ -183,6 +183,7 @@ span {
 .my-story-content h2 {
     text-align: left;
     line-height: 1.2;
+    color: var(--main-color);
 }
 
 .my-story-content h3 {
@@ -192,6 +193,7 @@ span {
 .my-story-content p {
     font-size: 20px;
     margin: 2rem 0 3rem;
+    color: #F8F8F8;
 =}
 
 /*.btn-my-story {*/
@@ -260,7 +262,7 @@ span {
 
 .education-content h6 {
     margin: 0;
-    color: darkblue;
+    color: #393e46;
     text-align: center;
 }
 
@@ -414,7 +416,7 @@ span {
 }
 
 .portfolio {
-    background: red;
+    background: #393e46;
 }
 
 .portfolio h2 span {
@@ -423,6 +425,7 @@ span {
 
 .portfolio h2 {
     margin-bottom: 3rem;
+    color: var(--main-color);
 }
 
 .portfolio h4 {
@@ -458,7 +461,7 @@ span {
 .portfolio-container .portfolio-box {
     position: relative;
     border-radius: 2rem;
-    box-shadow: 0 0 1rem red;
+    box-shadow: 0 0 1rem #393e46;
     overflow: hidden;
     display: flex;
 
@@ -468,20 +471,16 @@ span {
 .portfolio-box {
     position: relative;
     border-radius: 2rem;
-    box-shadow: 0 0 1rem red; /* Set initial box-shadow color to your background color */
+    box-shadow: 0 0 1rem #393e46; /* Set initial box-shadow color to your background color */
     overflow: hidden;
     display: flex;
     transition: box-shadow 0.5s ease; /* Add a transition for smooth effect */
 }
 
-.portfolio-box:hover {
-    box-shadow: 0 0 1rem var(--main-color); /* Change the box-shadow color on hover */
-}
-
 .portfolio-box img {
     width: 100%;
     transition: transform 0.5s ease, box-shadow 0.5s ease; /* Add box-shadow transition */
-    box-shadow: 0 0 1rem red; /* Set initial box-shadow color to your background color */
+    box-shadow: 0 0 1rem #393e46; /* Set initial box-shadow color to your background color */
 }
 
 .portfolio-box:hover img {
@@ -489,15 +488,13 @@ span {
     box-shadow: 0 0 1rem white; /* Change the box-shadow color on hover */
 }
 
-
-
 .portfolio-box .portfolio-layer-3 {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, .1), darkblue);
+    background: linear-gradient(rgba(0, 0, 0, .1), seagreen);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -508,13 +505,17 @@ span {
     transition: 0.5s ease;
 }
 
+.portfolio-box:hover .portfolio-layer{
+    box-shadow: 0 0 1rem green; /* Change the box-shadow color on hover */
+}
+
 .portfolio-box .portfolio-layer-2 {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, .1), yellow);
+    background: linear-gradient(rgba(0, 0, 0, .1), steelblue);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -531,7 +532,7 @@ span {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, .1), darkcyan);
+    background: linear-gradient(rgba(0, 0, 0, .1), lightcoral);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -548,7 +549,7 @@ span {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, .1), darkgreen);
+    background: linear-gradient(rgba(0, 0, 0, .1),#9896f1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -695,7 +696,7 @@ span {
 }
 
 .scroll-arrows i {
-    color: black;
+    color: white;
     font-size: 100px; /* Adjust the font size as needed */
 }
 
@@ -765,13 +766,18 @@ span {
     max-width: 70rem;
     text-align: center;
     margin: 1rem auto 3rem;
+}
 
+#contactForm input,
+#contactForm textarea {
+    color: var(--bg-color);; /* You can replace #333 with your desired color code or color name */
 }
 
 .contact form .input-box {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    color: var(--bg-color);
 }
 
 .contact form .input-box input, .contact form textarea {
