@@ -161,6 +161,13 @@ span {
         text-align: center; /* Center text horizontally for small screens */
     }
 
+    .home-img{
+        position: relative;
+        justify-content: center;
+        left: -1%;
+        text-align: center; /* Center text horizontally for small screens */
+    }
+
     .social-media a {
         margin: 3rem 0.5rem; /* Adjust margin for small screens */
     }
@@ -338,7 +345,7 @@ span {
 
 
 /* Media Query for Small-sized Screens */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .education {
         position: relative; /* Set position to relative for containing the absolute-positioned image */
         padding: 7rem 0; /* Adjust padding for smaller screens */
