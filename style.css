@@ -319,6 +319,8 @@ span {
         left: -70%;
         max-width: 700px;
         top: 5rem;
+        text-align: left;
+        justify-content: left;
     }
 
     .my-education-img {
@@ -336,7 +338,7 @@ span {
 
 
 /* Media Query for Small-sized Screens */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .education {
         position: relative; /* Set position to relative for containing the absolute-positioned image */
         padding: 7rem 0; /* Adjust padding for smaller screens */
