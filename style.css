@@ -164,8 +164,7 @@ span {
     .home-img{
         position: relative;
         justify-content: center;
-        left: -1%;
-        text-align: center; /* Center text horizontally for small screens */
+        left: 1%;
     }
 
     .social-media a {
