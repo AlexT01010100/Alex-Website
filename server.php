@@ -1,13 +1,13 @@
-<?php
-//require 'vendor/autoload.php';
+// <?php
+// require 'vendor/autoload.php';
 //
-////cd Documents\Personal_website
-////php -S localhost:8000
+// //cd Documents\Personal_website
+// //php -S localhost:8000
 //
-//use PHPMailer\PHPMailer\PHPMailer;
-//use PHPMailer\PHPMailer\Exception;
+// use PHPMailer\PHPMailer\PHPMailer;
+// use PHPMailer\PHPMailer\Exception;
 //
-//if ($_SERVER["REQUEST_METHOD"] == "POST") {
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
 //    $fullName = $_POST["fullName"];
 //    $email = $_POST["email"];
 //    $message = $_POST["message"];
@@ -49,5 +49,9 @@
 //        error_log("Error sending email using PHPMailer: " . $mail->ErrorInfo);
 //        exit();
 //    }
-//}
-//?>
+// }
+// ?>
+
+<?php
+    echo "hello world!";
+?>

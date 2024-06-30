@@ -267,18 +267,6 @@ span {
     max-width: 500px;
 }
 
-.education-content h1 {
-    margin: 0;
-    text-align: center;
-    color: black;
-}
-
-.education-content h6 {
-    margin: 0;
-    color: black;
-    text-align: center;
-}
-
 .education-content p span {
     margin: 0;
     color: black;
@@ -288,38 +276,23 @@ span {
 
 }
 
-.education-content p  {
-    margin: 0;
-    color: black;
-    max-width: 800rem;
-    font-size: 2.5rem;
-    text-align: left;
-    display: block; /* Ensure the paragraph is displayed as a block element */
-}
-
-
-
 /* Media Query for Fullscreen Sizes */
 @media (min-width: 769px) {
     .education-content {
         max-width: none; /* Reset max-width for larger screens */
         text-align: center; /* Center the text horizontally */
     }
-
     .education-content h1 {
         position: relative;
         top: -5rem;
         left: -10rem;
     }
-
     .education-content h6 {
         text-align: center; /* Center the title horizontally */
         position: relative;
         left: -10rem;
         top: -5rem;
     }
-
-
     .education-content p {
         position: relative;
         left: -70%;
@@ -328,21 +301,16 @@ span {
         text-align: left;
         justify-content: left;
     }
-
     .my-education-img {
         position: relative; /* Set position to relative */
         left: 38.5%;
         top: 9rem;
     }
-
     .my-education-img img {
         width: 200%; /* Allow image to take full width */
         height: 100%;
     }
-
 }
-
-
 /* Media Query for Small-sized Screens */
 @media (max-width: 768px) {
     .education {
@@ -739,8 +707,6 @@ span {
         bottom: 0; /* Position at the bottom instead of the top */
     }
 }
-
-
 
 .contact h2 {
     margin-bottom: 3rem;
