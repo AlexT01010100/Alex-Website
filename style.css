@@ -266,7 +266,7 @@ span {
 }
 
 .education-header h1 {
-    font-size: 6vh;
+    font-size: 4.5rem;
     margin-bottom: 1vh;
 }
 
@@ -275,7 +275,7 @@ span {
 }
 
 .education-header h2 {
-    font-size: 4vh;
+    font-size: 3rem;
     color: #555;
 }
 
@@ -298,6 +298,7 @@ span {
 .education-text p {
     margin: 2vh 0;
     line-height: 1.8;
+    font-size: 20px;
 }
 
 .education-img {
@@ -318,12 +319,16 @@ span {
 /* Media Query for Small Screens */
 @media (max-width: 1100px) {
 
+    .education {
+        max-height: 1700px; /* Increase maximum height for 600px screens */
+    }
+
     .education-header h1 {
-        font-size: 8vw;
+        font-size: 4.5rem;
     }
 
     .education-header h2 {
-        font-size: 4vw;
+        font-size: 3rem;
         color: #555;
     }
 
@@ -346,7 +351,21 @@ span {
     }
 
     .education-img img {
-        width: 100%;
+        width: 63rem;
+        height: auto;
+        border-radius: 0;
+    }
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 600px) {
+
+    .education {
+        max-height: 1700px; /* Increase maximum height for 600px screens */
+    }
+
+    .education-img img {
+        width: 30rem;
         height: auto;
         border-radius: 0;
     }
