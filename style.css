@@ -156,9 +156,9 @@ span {
 /* Media Query for Small-sized Screens */
 @media (max-width: 768px) {
     .home {
-        flex-direction: column; /* Stack items vertically for small screens */
-        align-items: center; /* Center items vertically for small screens */
-        text-align: center; /* Center text horizontally for small screens */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .home-img{
@@ -168,7 +168,7 @@ span {
     }
 
     .social-media a {
-        margin: 3rem 0.5rem; /* Adjust margin for small screens */
+        margin: 3rem 0.5rem;
     }
 }
 
@@ -232,7 +232,7 @@ span {
 /* Media Query for Small-sized Screens */
 @media (max-width: 768px) {
     .my-story {
-        align-items: flex-start; /* Reset alignment for larger screens */
+        align-items: flex-start;
     }
 
     .my-story-img img {
@@ -241,159 +241,116 @@ span {
         left: 28%;
         height: auto;
         max-width: 60vw;
-        margin: 0 auto; /* Center the image horizontally */
-        display: block; /* Ensure proper block-level rendering */
+        margin: 0 auto;
+        display: block;
     }
 
     .my-story-content h2,
     .my-story-content h3,
     .my-story-content p {
-        text-align: center; /* Reset text alignment for larger screens */
+        text-align: center;
     }
 }
 
 .education {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    max-height: 800px;
+    overflow-y: hidden;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--bg-color);
-    font-size: 3.9rem;
+    flex-direction: column;
+}
+
+.education-header {
     text-align: center;
-    padding: 15rem 0; /* Add padding as needed */
+}
+
+.education-header h1 {
+    font-size: 6vh;
+    margin-bottom: 1vh;
+}
+
+.education-header h1 span {
+    color: #007bff;
+}
+
+.education-header h2 {
+    font-size: 4vh;
+    color: #555;
 }
 
 .education-content {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2vh;
+}
+
+.education-text {
+    flex: 1;
+    max-width: 65%;
+    margin-right: 3vw;
+    font-size: 2.8vh;
+}
+
+.education-text p {
+    margin: 2vh 0;
+    line-height: 1.8;
+}
+
+.education-img {
+    flex: 1;
+    max-width: 35vw;
     text-align: center;
-    max-width: 500px;
 }
 
-.education-content h1 {
-    margin: 0;
-    text-align: center;
-    color: black;
-}
-
-.education-content h6 {
-    margin: 0;
-    color: black;
-    text-align: center;
-}
-
-.education-content p span {
-    margin: 0;
-    color: black;
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: left;
-
-}
-
-.education-content p  {
-    margin: 0;
-    color: black;
-    max-width: 800rem;
-    font-size: 2.5rem;
-    text-align: left;
-    display: block; /* Ensure the paragraph is displayed as a block element */
+.education-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 1.7vh;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 
 
-/* Media Query for Fullscreen Sizes */
-@media (min-width: 769px) {
-    .education-content {
-        max-width: none; /* Reset max-width for larger screens */
-        text-align: center; /* Center the text horizontally */
+/* Media Query for Small Screens */
+@media (max-width: 1000px) {
+
+    .education-header h1 {
+        font-size: 8vh;
     }
 
-    .education-content h1 {
-        position: relative;
-        top: -5rem;
-        left: -10rem;
-    }
-
-    .education-content h6 {
-        text-align: center; /* Center the title horizontally */
-        position: relative;
-        left: -10rem;
-        top: -5rem;
-    }
-
-
-    .education-content p {
-        position: relative;
-        left: -70%;
-        max-width: 700px;
-        top: 5rem;
-        text-align: left;
-        justify-content: left;
-    }
-
-    .my-education-img {
-        position: relative; /* Set position to relative */
-        left: 38.5%;
-        top: 9rem;
-    }
-
-    .my-education-img img {
-        width: 200%; /* Allow image to take full width */
-        height: 100%;
-    }
-
-}
-
-
-/* Media Query for Small-sized Screens */
-@media (max-width: 768px) {
-    .education {
-        position: relative; /* Set position to relative for containing the absolute-positioned image */
-        padding: 7rem 0; /* Adjust padding for smaller screens */
+    .education-header h2 {
+        font-size: 4vh;
+        color: #555;
     }
 
     .education-content {
-        max-width: 100%; /* Allow content to take full width */
-        text-align: center; /* Center the text */
-        margin-top: 2rem; /* Add margin as needed */
-        position: relative; /* Set position to relative for z-index to work */
-        z-index: 2; /* Set a higher z-index to bring the text forward */
+        flex-direction: column;
+        align-items: center;
     }
 
-    .education-content h1,
-    .education-content h6,
-    .education-content p {
-        text-align: center; /* Center the title, subtitle, and paragraph */
-        margin: 0; /* Remove any default margins */
-    }
-
-    .education-content p {
-        margin-top: 22rem;
-        margin-bottom: -2rem;
-        max-width: 100%;
-        font-size: 2.1rem;
-        position: relative; /* Set position to relative for absolute positioning of the span */
-        z-index: 1; /* Set a lower z-index to allow the span to be on top */
-    }
-
-    .education-content p span {
-        font-size: 2.3rem;
-        display: block;
+    .education-text {
+        max-width: 90%;
+        margin-right: 0;
         text-align: center;
-        margin: 1rem auto;
+        font-size: 3vh;
+        margin-bottom: 40px;
     }
 
-    .my-education-img {
-        position: absolute; /* Set position to absolute for layering behind the content */
-        margin-top: 1rem;
-        top: 24%; /* Adjust based on your preference and viewport height */
-        left: 50%;
-        transform: translate(-50%, -50%); /* Center the image horizontally and vertically */
-        width: 100vw; /* Use viewport width units */
+    .education-img {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .education-img img {
+        width: 100%;
         height: auto;
-        z-index: 0; /* Set a lower z-index to place it behind the content */
+        border-radius: 0;
     }
-
 }
-
 
 .my-story-span {
     color: var(--bg-color);
@@ -864,3 +821,4 @@ span {
         margin-bottom: 3rem;
     }
 }
+
