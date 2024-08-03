@@ -70,7 +70,6 @@ html, body {
 }
 
 section {
-    min-height: 100vh;
     padding: 10rem 9% 2rem;
 }
 
@@ -716,8 +715,6 @@ span {
     }
 }
 
-
-
 .contact h2 {
     margin-bottom: 3rem;
 }
@@ -772,6 +769,10 @@ span {
         padding: 10rem 3% 2rem;
     }
 
+    section .contact {
+        height: auto;
+    }
+
     .portfolio {
         padding-bottom: 7rem;
     }
@@ -780,9 +781,6 @@ span {
         padding: 2rem 3%;
     }
 
-}
-
-@media (max-width: 1100px) {
     #menu-icon {
         display: block;
         color: white;
