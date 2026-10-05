@@ -1,141 +1,54 @@
-//navbar scroll feature
+// mobile nav toggle
 
-let menuicon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+const menuToggle = document.getElementById('menu-toggle');
+const navbar = document.getElementById('navbar');
 
-menuicon.oneclick = () => {
-    menuicon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-};
-
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header .navbar a');
-
-window.onscroll = () => {
-    let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-
-    sections.forEach(sec => {
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
-
-        if (scrollPosition >= offset && scrollPosition < offset + height) {
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-            });
-
-            // Find the correct link and add the 'active' class
-            let matchingLink = document.querySelector('header .navbar a[href="#' + id + '"]');
-            if (matchingLink) {
-                matchingLink.classList.add('active');
-
-                // Trigger a reflow to apply the style changes immediately
-                void matchingLink.offsetWidth;
-            }
-        }
-    });
-    let header = document.querySelector('header');
-
-    header.classList.toggle('sticky', window.scrollY > 100);
-
-    menuicon.classList.remove('bx-x');
-    navbar.classList.remove('active');
-};
-
-document.addEventListener("DOMContentLoaded", function () {
-    // Selecting the left and right arrows
-    const leftArrow = document.querySelector('.bx.bxs-chevron-left');
-    const rightArrow = document.querySelector('.bx.bxs-chevron-right');
-    const portfolioWrapper = document.querySelector('.portfolio-wrapper');
-
-    // Adding click event listeners to the arrows
-    leftArrow.addEventListener('click', function (event) {
-        event.preventDefault();
-        navigatePortfolio(-1);
-    });
-
-    rightArrow.addEventListener('click', function (event) {
-        event.preventDefault();
-        navigatePortfolio(1);
-    });
-
-    // Function to navigate to the next/previous portfolio items
-    function navigatePortfolio(direction) {
-        const itemWidth = portfolioWrapper.offsetWidth / 3; // Assuming 3 items visible at a time
-        const currentPosition = portfolioWrapper.scrollLeft;
-        const newPosition = currentPosition + direction * itemWidth;
-
-        portfolioWrapper.scrollTo({
-            left: newPosition,
-            behavior: 'smooth'
-        });
-    }
+menuToggle.addEventListener('click', () => {
+    const open = navbar.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', open);
+    menuToggle.querySelector('i').className = open ? 'bx bx-x' : 'bx bx-menu';
 });
 
-//image slider (portfolio)
-
-let scrollContainer = document.querySelector(".portfolio-container");
-let back_button = document.getElementById("back_button");
-let forward_button = document.getElementById("forward_button");
-
-// scrollContainer.addEventListener("wheel", (evt) => {
-//     evt.preventDefault();
-//     scrollContainer.scrollLeft += evt.deltaY;
-//     scroll.Container.style.scrollBehavior = "auto";
-// });
-
-forward_button.addEventListener("click", () => {
-    scrollContainer.style.scrollBehavior = "smooth";
-    scrollContainer.scrollLeft += 900;
-});
-
-back_button.addEventListener("click", () => {
-    scrollContainer.style.scrollBehavior = "smooth";
-    scrollContainer.scrollLeft -= 900;
-});
-
-//email form submission handler
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent the default form submission
-
-    // Get form data
-    var formData = new FormData(this);
-
-    // Send form data using AJAX
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://formspree.io/f/xayrqlen", true);
-    xhr.setRequestHeader("Accept", "application/json");
-    xhr.send(formData);
-
-    // Handle the AJAX response
-    xhr.onload = function() {
-        if (xhr.status === 200) {
-            // Email sent successfully, handle success
-            window.location.href = "index.html";
-        } else {
-            // Error sending email, handle error
-            window.location.href = "index.html";
-        }
-    };
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    const menuIcon = document.getElementById('menu-icon');
-    const navbar = document.querySelector('.navbar');
-    const navLinks = document.querySelectorAll('.navbar a');
-
-    menuIcon.addEventListener('click', function () {
-        navbar.classList.toggle('active');
+navbar.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        navbar.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', false);
+        menuToggle.querySelector('i').className = 'bx bx-menu';
     });
+});
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', function () {
-            navbar.classList.remove('active');
+// header border once scrolled
+
+const header = document.querySelector('.header');
+const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 10);
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+// highlight the nav link for the section in view
+
+const navLinks = document.querySelectorAll('.navbar a[href^="#"]');
+const sectionObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
         });
     });
-});
+}, { rootMargin: '-45% 0px -50% 0px' });
 
+document.querySelectorAll('section[id]').forEach(sec => sectionObserver.observe(sec));
 
+// fade sections in as they scroll into view
 
+const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1 });
 
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
+document.getElementById('year').textContent = new Date().getFullYear();

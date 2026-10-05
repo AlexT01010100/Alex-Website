@@ -1,0 +1,13 @@
+# Editors / IDEs
+.idea/
+.vscode/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local tooling
+node_modules/
+_site/

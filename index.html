@@ -1,194 +1,425 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
-
-<!-- set up and imports-->
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex's Website</title>
+    <title>Alexander Terry — Embedded Software Engineer</title>
+    <meta name="description" content="Alexander Terry is an embedded software engineer building C/C++ software for mission-critical and real-time systems.">
 
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <meta name="theme-color" content="#0b0d10">
     <link rel="stylesheet" href="style.css">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 
-<!-- nav bar -->
-
 <body>
-<header class="header">
-    <a href="#home" class="logo">Alex's Portfolio</a>
+    <header class="header">
+        <a href="#top" class="logo"><span class="prompt">~/</span>alexander-terry</a>
 
-    <i class='bx bx-menu' id="menu-icon"></i>
+        <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <i class="bx bx-menu"></i>
+        </button>
 
-    <nav class="navbar">
-        <a href="#home">Home</a>
-        <a href="#my-story">About Me</a>
-        <a href="#education">Education</a>
-        <a href="#portfolio">Projects</a>
-        <a href="#contact">Contact</a>
+        <nav class="navbar" id="navbar">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+            <a href="Alexander-Terry-Resume.pdf" class="nav-cta" target="_blank" rel="noopener">Resume</a>
+        </nav>
+    </header>
 
-    </nav>
-</header>
+    <main id="top">
 
-<!-- home page -->
+        <!-- hero -->
 
-    <section class="home" id="home">
-        <div class="home-content">
-            <h3>Hi there!</h3>
-            <h1>My name is Alexander Terry</h1>
-            <h3>And I'm a <span>Software Engineer</span></h3>
-            <div class="social-media">
-                <a href="https://github.com/AlexT01010100"><i class='bx bxl-github' ></i></a>
-                <a href="https://www.linkedin.com/in/alexander-terry-computer-science/"><i class='bx bxl-linkedin-square' ></i></a>
-            </div>
-            <a href="https://drive.google.com/file/d/1pYaTTiN9UznWHiPQzBmwzlv4uYTkINqx/view?usp=sharing" class="btn">Preview Resume</a>
-        </div>
-        <div class="home-img">
-            <img src="professional-photo.jpg" alt="" height="100%" width="100%">
-        </div>
-    </section>
-
-
-<!-- my story -->
-
-<section class="my-story" id="my-story">
-    <div class="my-story-img">
-        <img src="website-img.jpg" alt="">
-    </div>
-
-    <div class="my-story-content">
-        <h2 class="heading">About <span class="my-story-span">Me</span></h2>
-        <p>
-            I'm currently an honors student at the University at Buffalo, studying Computer Science and Mathematics in my senior year.
-            Originally from Canada, I crossed the border in pursuit of top-notch education. With a strong academic foundation and a
-            passion for problem-solving, I am poised to make a significant contribution in the field of technology.
-        </p>
-        <!--            <a href="#" class="btn-my-story">Read More</a>-->
-    </div>
-</section>
-
-<!-- education -->
-
-<section class="education" id="education">
-    <div class="education-header">
-        <h1>My <span>Education</span></h1>
-        <h2>B.S. Computer Science & B.A. Mathematics</h2>
-    </div>
-    <div class="education-content">
-        <div class="education-text">
-            <p><span>Expected Graduation Date:</span> May 2025</p>
-            <p><span>GPA:</span> 3.91/4.00</p>
-            <p><span>Awards:</span> Dean's List x7, Grace W. Capen Award, SEAS Scholarship Endowment</p>
-            <p><span>Current Courses:</span>
-                MTH417 (Survery of Multivariable Calculus),
-                STA302 (Statistical Inference),
-                MTH309 (Linear Algebra),
-                CSE429 (Algorithms for Modern Computing Systems),
-            </p>
-            <p><span>Extracurricular Activities:</span>
-                Theta Tau,
-                Engineering Intramurals,
-                Improv Club
-            </p>
-        </div>
-        <div class="education-img">
-            <img src="education.png" alt="Education Overview">
-        </div>
-    </div>
-</section>
-
-<!--portfolio -->
-
-<!--layout of project section-->
-
-<section class="portfolio" id="portfolio">
-    <h2 class="heading">Latest <span>Projects</span></h2>
-    <div class="portfolio-wrap">
-        <a href="#" class="scroll-arrows">
-            <i class='bx bxs-chevron-left' id="back_button"></i>
-            <i class='bx bxs-chevron-right' id="forward_button"></i>
-        </a>
-
-        <!--dynamic memory allocator project-->
-
-        <div class="portfolio-container">
-            <div class="portfolio-box">
-                <span><img src="dynamic-memory-allocator-img.png" alt="" height="470" width="100%"></span>
-                <div class="portfolio-layer-3">
-                    <h4>Dynamic Memory Allocator</h4>
-                    <p>C/C++</p>
-                    <a href="https://github.com/AlexT01010100/Dynamic-Memory-Allocator"><i class='bx bx-link-external' ></i></a>
+        <section class="hero">
+            <div class="hero-text reveal">
+                <p class="eyebrow">// embedded software engineer</p>
+                <h1>Alexander Terry</h1>
+                <p class="lede">
+                    I write C and C++ for hardware that has to work. Today that's mission-critical
+                    systems at <strong>General Dynamics Mission Systems</strong>; before that,
+                    real-time voice and data over IP at <strong>VOCAL Technologies</strong>.
+                </p>
+                <ul class="hero-meta">
+                    <li><i class="bx bx-map"></i> Scottsdale, AZ</li>
+                    <li><i class="bx bx-chip"></i> C/C++ · RTOS · Embedded Linux</li>
+                </ul>
+                <div class="hero-actions">
+                    <a href="#experience" class="btn btn-primary">See my work</a>
+                    <a href="Alexander-Terry-Resume.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Resume <i class="bx bx-right-top-arrow-circle"></i></a>
+                    <div class="socials">
+                        <a href="https://github.com/AlexT01010100" aria-label="GitHub" target="_blank" rel="noopener"><i class="bx bxl-github"></i></a>
+                        <a href="https://www.linkedin.com/in/alexander-terry-computer-science/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bx bxl-linkedin"></i></a>
+                        <a href="mailto:alexterry179@gmail.com" aria-label="Email"><i class="bx bx-envelope"></i></a>
+                    </div>
                 </div>
             </div>
+            <div class="hero-img reveal">
+                <img src="img/portrait.jpg" alt="Alexander Terry overlooking a mountain valley">
+            </div>
+        </section>
 
-            <!--self checkout system project-->
+        <!-- about -->
 
-            <div class="portfolio-box">
-                <span><img src="website-img-selfcheckout-img.png" alt="" height="470" width="100%"></span>
-                <div class="portfolio-layer-2">
-                    <h4>Self Checkout System</h4>
-                    <p>Scala</p>
-                    <a href="https://github.com/AlexT01010100/Self-Checkout-System"><i class='bx bx-link-external' ></i></a>
+        <section class="section" id="about">
+            <div class="section-head reveal">
+                <span class="section-num">01</span>
+                <h2>About</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p>
+                        I work close to the metal: drivers and firmware, cross-compilation toolchains,
+                        RTOS/RTEMS targets, FPGA-integrated boards, and the build systems that hold it all
+                        together. I like problems where latency, memory and reliability actually matter.
+                    </p>
+                    <p>
+                        Originally from Canada, I moved to Buffalo for the University at Buffalo Honors College,
+                        graduating with a B.S. in Computer Science and a B.A. in Mathematics. Outside of work I
+                        build things end to end, from a Raspberry Pi sensor-telemetry pipeline to a production booking platform for a local business.
+                    </p>
                 </div>
+                <dl class="facts reveal">
+                    <div>
+                        <dt>Currently</dt>
+                        <dd>Software Engineer, GDMS</dd>
+                    </div>
+                    <div>
+                        <dt>Education</dt>
+                        <dd>B.S. CS &amp; B.A. Math, University at Buffalo '25</dd>
+                    </div>
+                    <div>
+                        <dt>GPA</dt>
+                        <dd>3.92 / 4.00 · Honors College</dd>
+                    </div>
+                    <div>
+                        <dt>Certifications</dt>
+                        <dd>Google Cybersecurity · IBM Z Xplore</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- experience -->
+
+        <section class="section" id="experience">
+            <div class="section-head reveal">
+                <span class="section-num">02</span>
+                <h2>Experience</h2>
             </div>
 
-            <!--university interactive map project-->
+            <ol class="timeline">
+                <li class="role reveal">
+                    <div class="role-when">Sep 2025 — Present</div>
+                    <div class="role-body">
+                        <div class="role-head">
+                            <img class="role-logo" src="img/logo-gdms.png" alt="General Dynamics logo" width="48" height="48">
+                            <div>
+                                <h3>Software Engineer <span class="at">@ General Dynamics Mission Systems</span></h3>
+                                <p class="role-where">Scottsdale, AZ · Full-time · Hybrid</p>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Identified and proposed an open-source alternative to a planned commercial solution, projected to save the program over $100,000 pending adoption.</li>
+                            <li>Develop embedded C/C++ across the full lifecycle, from driver and firmware work through build-system tooling, on cross-compilation toolchains, RTOS/RTEMS environments and FPGA-integrated hardware in a security-controlled defense environment.</li>
+                            <li>Build and maintain containerized development environments and Python unit/integration test suites that standardize embedded builds and drive regression testing across build targets.</li>
+                        </ul>
+                        <ul class="tags">
+                            <li>C/C++</li><li>RTEMS</li><li>FPGA</li><li>Docker</li><li>Python</li>
+                        </ul>
+                    </div>
+                </li>
 
-            <div class="portfolio-box">
-                <span><img src="engagement-map-img.png" alt="" height="470" width="100%"></span>
-                <div class="portfolio-layer">
-                    <h4>University Interactive Map</h4>
-                    <p>JS, HTML5, CSS</p>
-                    <a href="https://github.com/skxvtchy/Interactive_Map"><i class='bx bx-link-external' ></i></a>
-                </div>
+                <li class="role reveal">
+                    <div class="role-when">Jan 2025 — Jul 2025</div>
+                    <div class="role-body">
+                        <div class="role-head">
+                            <img class="role-logo" src="img/logo-vocal.png" alt="VOCAL Technologies logo" width="48" height="48">
+                            <div>
+                                <h3>Software Engineer <span class="at">@ VOCAL Technologies</span></h3>
+                                <p class="role-where">Buffalo, NY · Full-time · On-site</p>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Developed and optimized embedded C for real-time voice and data systems (MoIP, VoIP, FoIP), tuning SIP, RTP and TCP/UDP stacks and G.711/G.729 codecs to meet latency and bandwidth constraints.</li>
+                            <li>Built custom Linux distributions with Yocto and Buildroot for ARM targets, including toolchains and real-time performance tuning.</li>
+                            <li>Automated build and deployment with Perl and Bash, cutting cycle times and improving CI/CD reliability.</li>
+                            <li>Implemented and optimized signal modulation and compression at various bitrates to improve transmission efficiency and reliability.</li>
+                        </ul>
+                        <ul class="tags">
+                            <li>C</li><li>Yocto</li><li>Buildroot</li><li>ARM</li><li>SIP/RTP</li><li>Bash</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="timeline-label reveal">Research, teaching &amp; leadership</li>
+
+                <li class="role reveal">
+                    <div class="role-when">May 2024 — Aug 2024</div>
+                    <div class="role-body">
+                        <div class="role-head">
+                            <img class="role-logo" src="img/logo-ub.png" alt="University at Buffalo logo" width="48" height="48">
+                            <div>
+                                <h3>BRIGHT Program Scholar <span class="at">@ UB Jacobs School of Medicine</span></h3>
+                                <p class="role-where">Buffalo, NY · Full-time · NIH R25 research training program</p>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Mentored research under Dr. Alexander Diehl, integrating fMRI terms into MRIO, the MRI Acquisition and Analysis Ontology approved by the Ontology for Biomedical Investigations.</li>
+                            <li>Identified and defined new terms and wrote subclass and equivalence axioms covering fMRI acquisition, analysis, functional connectivity and protocols, broadening MRIO across MRI research.</li>
+                        </ul>
+                        <ul class="tags">
+                            <li>Ontology engineering</li><li>fMRI</li><li>Research</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="role reveal">
+                    <div class="role-when">Feb 2024 — Aug 2024</div>
+                    <div class="role-body">
+                        <div class="role-head">
+                            <img class="role-logo" src="img/logo-bnac.png" alt="Buffalo Neuroimaging Analysis Center logo" width="48" height="48">
+                            <div>
+                                <h3>Undergraduate Research Assistant <span class="at">@ Buffalo Neuroimaging Analysis Center</span></h3>
+                                <p class="role-where">Remote · Part-time</p>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Assessed functional connectivity in real fMRI datasets with the CONN toolbox under Dr. Michael Dwyer.</li>
+                            <li>Preprocessed and analyzed fMRI data in MATLAB, and wrote custom scripts that streamlined the lab's analysis workflow.</li>
+                        </ul>
+                        <ul class="tags">
+                            <li>MATLAB</li><li>CONN</li><li>fMRI</li><li>Scripting</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="role reveal">
+                    <div class="role-when">Aug 2022 — May 2025</div>
+                    <div class="role-body">
+                        <div class="role-head">
+                            <img class="role-logo" src="img/logo-ub.png" alt="University at Buffalo logo" width="48" height="48">
+                            <div>
+                                <h3>Undergraduate Teaching Assistant <span class="at">@ UB School of Engineering</span></h3>
+                                <p class="role-where">Buffalo, NY · Part-time · 3 courses</p>
+                            </div>
+                        </div>
+                        <ul class="subroles">
+                            <li>
+                                <div class="subrole-head"><strong>Data Structures</strong><span>Aug 2023 — May 2025</span></div>
+                                <p>Reinforced lecture material in lab sessions and held office hours three times a week.</p>
+                            </li>
+                            <li>
+                                <div class="subrole-head"><strong>Introduction to Computer Science II</strong><span>Jan 2023 — May 2023</span></div>
+                                <p>Ran one-on-one interviews to check students' grasp of OOP, inheritance, polymorphism, recursion, unit testing and data structures; held office hours twice a week and graded 60+ assignments weekly.</p>
+                            </li>
+                            <li>
+                                <div class="subrole-head"><strong>Internet, Computing &amp; Society Seminar</strong><span>Aug 2022 — Jan 2024</span></div>
+                                <p>Led students through computer science activities and graded 70+ assignments weekly.</p>
+                            </li>
+                        </ul>
+                        <ul class="tags">
+                            <li>Java</li><li>Algorithms</li><li>Debugging</li><li>Teaching</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="role reveal">
+                    <div class="role-when">Aug 2022 — Aug 2024</div>
+                    <div class="role-body">
+                        <div class="role-head">
+                            <img class="role-logo" src="img/logo-ub.png" alt="University at Buffalo logo" width="48" height="48">
+                            <div>
+                                <h3>Welcome Weekend Leader <span class="at">@ University at Buffalo</span></h3>
+                                <p class="role-where">Buffalo, NY · Seasonal</p>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Welcomed incoming students three years running (2022–2024) with campus tours, answers to their questions and behind-the-scenes event support.</li>
+                        </ul>
+                        <ul class="tags">
+                            <li>Leadership</li>
+                        </ul>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <!-- projects -->
+
+        <section class="section" id="projects">
+            <div class="section-head reveal">
+                <span class="section-num">03</span>
+                <h2>Projects</h2>
             </div>
 
-            <!--jaclyn's threading project-->
+            <div class="cases">
+            <article class="case reveal">
+                <div class="case-intro">
+                    <div class="case-text">
+                        <p class="project-kicker"><i class="bx bx-chip"></i> Embedded · Raspberry Pi 5</p>
+                        <h3>BME280 Pi Telemetry</h3>
+                        <p class="case-summary">
+                            A sensor-to-dashboard telemetry pipeline: a C driver reads a BME280 over SPI, and a FastAPI service
+                            stores the readings in PostgreSQL and serves them to a live dashboard with history and CSV export.
+                        </p>
+                        <ol class="pipeline">
+                            <li>BME280</li><li>SPI</li><li>C driver</li><li>FastAPI</li><li>PostgreSQL</li><li>Dashboard</li>
+                        </ol>
+                        <dl class="case-meta">
+                            <div><dt>Stack</dt><dd>C · Python · FastAPI · PostgreSQL · Docker</dd></div>
+                        </dl>
+                        <div class="case-links">
+                            <a href="https://github.com/AlexT01010100/bme280-pi-telemetry" class="btn btn-primary" target="_blank" rel="noopener"><i class="bx bxl-github"></i> View on GitHub</a>
+                        </div>
+                    </div>
 
-            <div class="portfolio-box">
-                <span><img src="microblading-img.png" alt="" height="470" width="100%"></span>
-                <div class="portfolio-layer-1">
-                    <h4>Jaclyns Threading Website</h4>
-                    <p>JS, HTML5, CSS</p>
-                    <a href="https://github.com/AlexT01010100/Jaclyns-Threading-Website"><i class='bx bx-link-external' ></i></a>
+                    <div class="case-visual has-photo">
+                        <a class="browser" href="https://github.com/AlexT01010100/bme280-pi-telemetry" target="_blank" rel="noopener" aria-label="Open the bme280-pi-telemetry repository">
+                            <div class="browser-bar">
+                                <span class="dots"><i></i><i></i><i></i></span>
+                                <span class="browser-url"><i class="bx bx-chip"></i> raspberrypi:8000</span>
+                            </div>
+                            <img src="img/bme280-dashboard.jpg" alt="Live dashboard charting temperature, pressure and humidity from the sensor">
+                        </a>
+                        <figure class="hw-photo">
+                            <img src="img/bme280-hardware.jpg" alt="Raspberry Pi 5 wired to a BME280 sensor on a breadboard">
+                            <figcaption>The actual build</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <ol class="case-highlights">
+                    <li>
+                        <span class="hl-num">01</span>
+                        <h4>Driver written in C</h4>
+                        <p>Reads the sensor over SPI with the chip's calibration and compensation math, built as a CLI and a shared library loaded from Python.</p>
+                    </li>
+                    <li>
+                        <span class="hl-num">02</span>
+                        <h4>Fault tolerant</h4>
+                        <p>Reconnects the sensor after failed reads, rejects out-of-range data and prunes old readings automatically.</p>
+                    </li>
+                    <li>
+                        <span class="hl-num">03</span>
+                        <h4>Shipped like a product</h4>
+                        <p>Packaged with Docker and GitHub Actions CI building ARM64 and AMD64 images.</p>
+                    </li>
+                </ol>
+            </article>
+
+            <article class="case reveal">
+                <div class="case-intro">
+                    <div class="case-text">
+                        <p class="project-kicker"><span class="live-dot"></span> Live in production</p>
+                        <h3>Jaclyn's Threading</h3>
+                        <p class="case-summary">
+                            A full-stack booking platform for a local beauty salon. Architected and shipped end-to-end,
+                            from the database schema to deployment.
+                        </p>
+                        <dl class="case-meta">
+                            <div><dt>Stack</dt><dd>Node.js · Express · PostgreSQL · Docker</dd></div>
+                        </dl>
+                        <div class="case-links">
+                            <a href="https://jaclynbeauty.com" class="btn btn-primary" target="_blank" rel="noopener">Visit site <i class="bx bx-right-top-arrow-circle"></i></a>
+                        </div>
+                    </div>
+
+                    <a class="browser" href="https://jaclynbeauty.com" target="_blank" rel="noopener" aria-label="Open jaclynbeauty.com">
+                        <div class="browser-bar">
+                            <span class="dots"><i></i><i></i><i></i></span>
+                            <span class="browser-url"><i class="bx bx-lock-alt"></i> jaclynbeauty.com</span>
+                        </div>
+                        <img src="img/jaclyns-booking.jpg" alt="Homepage of jaclynbeauty.com">
+                    </a>
+                </div>
+
+                <ol class="case-highlights">
+                    <li>
+                        <span class="hl-num">01</span>
+                        <h4>Scheduling engine</h4>
+                        <p>Real-time availability and booking, automated client notifications, and an authenticated admin dashboard for the owner.</p>
+                    </li>
+                    <li>
+                        <span class="hl-num">02</span>
+                        <h4>Hardened by default</h4>
+                        <p>Enforced Content Security Policy, rate limiting, bcrypt authentication and layered bot mitigation.</p>
+                    </li>
+                    <li>
+                        <span class="hl-num">03</span>
+                        <h4>Zero-downtime fix</h4>
+                        <p>Eliminated a live double-booking defect by shipping a database migration with no downtime.</p>
+                    </li>
+                </ol>
+            </article>
+            </div>
+        </section>
+
+        <!-- skills -->
+
+        <section class="section" id="skills">
+            <div class="section-head reveal">
+                <span class="section-num">04</span>
+                <h2>Skills</h2>
+            </div>
+
+            <div class="skills">
+                <div class="skill-group reveal">
+                    <h3>Languages</h3>
+                    <ul class="tags"><li>C</li><li>C++</li><li>Python</li><li>Bash</li><li>Perl</li><li>JavaScript</li><li>Rust (familiar)</li></ul>
+                </div>
+                <div class="skill-group reveal">
+                    <h3>Embedded &amp; Build</h3>
+                    <ul class="tags"><li>Yocto</li><li>Buildroot</li><li>U-Boot</li><li>Device Tree</li><li>Kernel modules &amp; drivers</li><li>GCC/Clang cross-toolchains</li><li>Make</li><li>CMake</li><li>RTEMS</li></ul>
+                </div>
+                <div class="skill-group reveal">
+                    <h3>Hardware &amp; Interfaces</h3>
+                    <ul class="tags"><li>ARM Cortex-A/M</li><li>MIPS</li><li>FPGA platforms</li><li>UART</li><li>I2C</li><li>SPI</li><li>JTAG</li><li>HSDP</li></ul>
+                </div>
+                <div class="skill-group reveal">
+                    <h3>Networking</h3>
+                    <ul class="tags"><li>SIP</li><li>RTP</li><li>TCP/IP</li><li>UDP</li><li>VoIP</li><li>FoIP</li><li>G.711 / G.729</li></ul>
+                </div>
+                <div class="skill-group reveal">
+                    <h3>Debug &amp; Lab</h3>
+                    <ul class="tags"><li>GDB</li><li>Valgrind</li><li>Wireshark</li><li>Signal generators</li><li>Spectrum analyzers</li></ul>
+                </div>
+                <div class="skill-group reveal">
+                    <h3>Tooling</h3>
+                    <ul class="tags"><li>Git</li><li>GitLab CI</li><li>GitHub Actions</li><li>Docker</li><li>FastAPI</li><li>PostgreSQL</li><li>Jira</li></ul>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-</section>
+        <!-- contact -->
 
-<!-- contact section-->
+        <section class="section contact" id="contact">
+            <div class="contact-card reveal">
+                <p class="eyebrow">// get in touch</p>
+                <h2>Let's build something reliable.</h2>
+                <p>I'm always happy to talk embedded systems, interesting hardware, or new opportunities.</p>
+                <div class="hero-actions centered">
+                    <a href="mailto:alexterry179@gmail.com" class="btn btn-primary"><i class="bx bx-envelope"></i> alexterry179@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/alexander-terry-computer-science/" class="btn btn-ghost" target="_blank" rel="noopener"><i class="bx bxl-linkedin"></i> LinkedIn</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<section class="contact" id="contact">
-    <h2 class="heading"><span>Contact </span>Me</h2>
+    <footer class="footer">
+        <p>© <span id="year"></span> Alexander Terry</p>
+        <a href="#top">Back to top <i class="bx bx-up-arrow-alt"></i></a>
+    </footer>
 
-    <!--        <form action="server.php" method="post">-->
-    <!--            <div class="input-box">-->
-    <!--                <input type="text" placeholder="Full Name" name="fullName">-->
-    <!--                <input type="text" placeholder="Email" name="email">-->
-    <!--            </div>-->
-    <!--            <textarea name="message" cols="30" rows="10" placeholder="Your Message"></textarea>-->
-    <!--            <input type="submit" value="Send Message" class="btn">-->
-    <!--        </form>-->
-
-    <form id="contactForm" action="script.js" method="POST">
-        <div class="input-box">
-            <input type="text" name="fullName" placeholder="Full Name" required>
-            <input type="email" name="email" placeholder="Email" required>
-        </div>
-        <textarea name="message" cols="30" rows="10" placeholder="Message" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
-    </form>
-
-</section>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
-
-

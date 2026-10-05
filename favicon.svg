@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <g stroke="#4fd1a5" stroke-width="3" stroke-linecap="round">
+    <path d="M22 4v6M32 4v6M42 4v6M22 54v6M32 54v6M42 54v6M4 22h6M4 32h6M4 42h6M54 22h6M54 32h6M54 42h6"/>
+  </g>
+  <rect x="10" y="10" width="44" height="44" rx="8" fill="#0b0d10" stroke="#4fd1a5" stroke-width="3"/>
+  <text x="32" y="40.5" text-anchor="middle" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="21" font-weight="700" fill="#4fd1a5">AT</text>
+</svg>
