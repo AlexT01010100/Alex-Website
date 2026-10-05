@@ -911,7 +911,7 @@ main {
     }
 
     .hero-img {
-        justify-self: start;
+        justify-self: center;
         width: min(70%, 280px);
         order: -1;
     }
