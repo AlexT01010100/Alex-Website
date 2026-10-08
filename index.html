@@ -270,7 +270,7 @@
                         <h3>Pi Air Monitor</h3>
                         <p class="case-summary">
                             An indoor air-quality monitor: C drivers read a BME280 over SPI and an MH-Z19 CO₂ sensor over UART,
-                            and a FastAPI service stores the readings in PostgreSQL and serves a live dashboard with history and CSV export.
+                            and a FastAPI service stores the readings in PostgreSQL and serves a live dashboard with CO₂ danger alerts, history and CSV export.
                         </p>
                         <ol class="pipeline">
                             <li>BME280 + MH-Z19</li><li>SPI / UART</li><li>C drivers</li><li>FastAPI</li><li>PostgreSQL</li><li>Dashboard</li>
@@ -290,13 +290,33 @@
                                 <span class="dots"><i></i><i></i><i></i></span>
                                 <span class="browser-url"><i class="bx bx-chip"></i> raspberrypi:8000</span>
                             </div>
-                            <img src="img/air-monitor-dashboard.jpg" alt="Live dashboard charting temperature, pressure, humidity and CO₂ over 24 hours">
+                            <img src="img/air-monitor-dashboard.jpg" alt="Live dashboard charting temperature, pressure, humidity and CO₂ over 24 hours, with CO₂ thresholds marked">
                         </a>
                         <figure class="hw-photo">
                             <img src="img/air-monitor-hardware.jpg" alt="Raspberry Pi 5 wired to a BME280 sensor on a breadboard and an MH-Z19 CO₂ sensor">
                             <figcaption>The actual build</figcaption>
                         </figure>
                     </div>
+                </div>
+
+                <div class="case-feature">
+                    <div class="feature-text">
+                        <p class="project-kicker"><i class="bx bx-error"></i> New · CO₂ danger alerts</p>
+                        <h4>Know when to open a window</h4>
+                        <p>
+                            Every CO₂ reading is placed in one of five bands, from Good to Dangerous, based on published
+                            health guidance up to the OSHA 8-hour exposure limit. The dashboard labels the current band and
+                            draws the thresholds on the chart. At Unhealthy or above it raises a banner with advice and logs a warning.
+                        </p>
+                        <ol class="levels">
+                            <li class="lv-good">Good</li><li class="lv-moderate">800</li><li class="lv-poor">1200</li><li class="lv-unhealthy">2000</li><li class="lv-danger">5000 ppm</li>
+                        </ol>
+                        <p class="feature-note">Hysteresis: a level drops only once CO₂ is 50 ppm below the boundary, so readings near a threshold don't flicker.</p>
+                    </div>
+                    <figure class="feature-shot">
+                        <img src="img/air-monitor-alert.jpg" alt="Dashboard alert banner reading: CO₂ level Unhealthy since 7:38 PM. Headaches and drowsiness are likely. Ventilate now. The CO₂ tile shows 2295 ppm marked Unhealthy.">
+                        <figcaption>Alert state, shown with simulated readings</figcaption>
+                    </figure>
                 </div>
 
                 <ol class="case-highlights">
