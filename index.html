@@ -85,7 +85,7 @@
                     <p>
                         Originally from Canada, I moved to Buffalo for the University at Buffalo Honors College,
                         graduating with a B.S. in Computer Science and a B.A. in Mathematics. Outside of work I
-                        build things end to end, from a Raspberry Pi sensor-telemetry pipeline to a production booking platform for a local business.
+                        build things end to end, from a Raspberry Pi indoor air monitor to a production booking platform for a local business.
                     </p>
                 </div>
                 <dl class="facts reveal">
@@ -267,32 +267,33 @@
                 <div class="case-intro">
                     <div class="case-text">
                         <p class="project-kicker"><i class="bx bx-chip"></i> Embedded · Raspberry Pi 5</p>
-                        <h3>BME280 Pi Telemetry</h3>
+                        <h3>Pi Air Monitor</h3>
                         <p class="case-summary">
-                            A sensor-to-dashboard telemetry pipeline: a C driver reads a BME280 over SPI, and a FastAPI service
-                            stores the readings in PostgreSQL and serves them to a live dashboard with history and CSV export.
+                            An indoor air-quality monitor: C drivers read a BME280 over SPI and an MH-Z19 CO₂ sensor over UART,
+                            and a FastAPI service stores the readings in PostgreSQL and serves a live dashboard with history and CSV export.
                         </p>
                         <ol class="pipeline">
-                            <li>BME280</li><li>SPI</li><li>C driver</li><li>FastAPI</li><li>PostgreSQL</li><li>Dashboard</li>
+                            <li>BME280 + MH-Z19</li><li>SPI / UART</li><li>C drivers</li><li>FastAPI</li><li>PostgreSQL</li><li>Dashboard</li>
                         </ol>
                         <dl class="case-meta">
+                            <div><dt>Measures</dt><dd>Temperature · Pressure · Humidity · CO₂</dd></div>
                             <div><dt>Stack</dt><dd>C · Python · FastAPI · PostgreSQL · Docker</dd></div>
                         </dl>
                         <div class="case-links">
-                            <a href="https://github.com/AlexT01010100/bme280-pi-telemetry" class="btn btn-primary" target="_blank" rel="noopener"><i class="bx bxl-github"></i> View on GitHub</a>
+                            <a href="https://github.com/AlexT01010100/pi-air-monitor" class="btn btn-primary" target="_blank" rel="noopener"><i class="bx bxl-github"></i> View on GitHub</a>
                         </div>
                     </div>
 
                     <div class="case-visual has-photo">
-                        <a class="browser" href="https://github.com/AlexT01010100/bme280-pi-telemetry" target="_blank" rel="noopener" aria-label="Open the bme280-pi-telemetry repository">
+                        <a class="browser" href="https://github.com/AlexT01010100/pi-air-monitor" target="_blank" rel="noopener" aria-label="Open the pi-air-monitor repository">
                             <div class="browser-bar">
                                 <span class="dots"><i></i><i></i><i></i></span>
                                 <span class="browser-url"><i class="bx bx-chip"></i> raspberrypi:8000</span>
                             </div>
-                            <img src="img/bme280-dashboard.jpg" alt="Live dashboard charting temperature, pressure and humidity from the sensor">
+                            <img src="img/air-monitor-dashboard.jpg" alt="Live dashboard charting temperature, pressure, humidity and CO₂ over 24 hours">
                         </a>
                         <figure class="hw-photo">
-                            <img src="img/bme280-hardware.jpg" alt="Raspberry Pi 5 wired to a BME280 sensor on a breadboard">
+                            <img src="img/air-monitor-hardware.jpg" alt="Raspberry Pi 5 wired to a BME280 sensor on a breadboard and an MH-Z19 CO₂ sensor">
                             <figcaption>The actual build</figcaption>
                         </figure>
                     </div>
@@ -301,18 +302,18 @@
                 <ol class="case-highlights">
                     <li>
                         <span class="hl-num">01</span>
-                        <h4>Driver written in C</h4>
-                        <p>Reads the sensor over SPI with the chip's calibration and compensation math, built as a CLI and a shared library loaded from Python.</p>
+                        <h4>Two drivers written in C</h4>
+                        <p>SPI driver with the BME280's calibration and compensation math, and a termios UART driver for the MH-Z19 with framing, checksums and timeouts. Each ships as a CLI and a shared library loaded from Python.</p>
                     </li>
                     <li>
                         <span class="hl-num">02</span>
                         <h4>Fault tolerant</h4>
-                        <p>Reconnects the sensor after failed reads, rejects out-of-range data and prunes old readings automatically.</p>
+                        <p>Reopens a sensor after a failed read so unplugging either one recovers without a restart, rejects out-of-range and bad-checksum data, and prunes old readings hourly.</p>
                     </li>
                     <li>
                         <span class="hl-num">03</span>
-                        <h4>Shipped like a product</h4>
-                        <p>Packaged with Docker and GitHub Actions CI building ARM64 and AMD64 images.</p>
+                        <h4>Tested and shipped like a product</h4>
+                        <p>Unit tests check the math against the Bosch datasheet and drive the UART code through a simulated sensor. CI builds with -Werror for x86_64 and aarch64 and publishes ARM64/AMD64 Docker images.</p>
                     </li>
                 </ol>
             </article>
