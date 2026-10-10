@@ -129,12 +129,13 @@
                             </div>
                         </div>
                         <ul>
-                            <li>Identified and proposed an open-source alternative to a planned commercial solution, projected to save the program over $100,000 pending adoption.</li>
-                            <li>Develop embedded C/C++ across the full lifecycle, from driver and firmware work through build-system tooling, on cross-compilation toolchains, RTOS/RTEMS environments and FPGA-integrated hardware in a security-controlled defense environment.</li>
-                            <li>Build and maintain containerized development environments and Python unit/integration test suites that standardize embedded builds and drive regression testing across build targets.</li>
+                            <li>Replaced $5K+ commercial software licenses with a customized open-source solution by modifying its C driver layer for program-specific hardware, now deployed across 2 programs.</li>
+                            <li>Ported a mission-critical C/C++ application from SPARC to ARM, cutting end-to-end latency from 1,084 ms to 93 ms (11.7× faster) and core processing time by 6× to meet customer latency requirements.</li>
+                            <li>Parallelized PetaLinux builds across all 3 target boards, reducing build time by 67%, and automated remote board reimaging so a network-triggered recovery script replaces 20–45-minute lab trips.</li>
+                            <li>Expanded the C/C++ automated test suite from 4 to 31 tests (7.75× growth) and wired it into every CI/CD pipeline change to catch regressions before deployment.</li>
                         </ul>
                         <ul class="tags">
-                            <li>C/C++</li><li>RTEMS</li><li>FPGA</li><li>Docker</li><li>Python</li>
+                            <li>C/C++</li><li>ARM</li><li>SPARC</li><li>PetaLinux</li><li>Drivers</li><li>CI/CD</li>
                         </ul>
                     </div>
                 </li>
